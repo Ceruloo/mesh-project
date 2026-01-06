@@ -1,700 +1,2502 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- Meta-Information -->
-    <title>M-SHAURI</title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+/*** ======= // TABLE OF CONTENT // ============================
+01- Google Fonts
+02- Plugin Stylesheets Import
+03- General Styling
+03- Social Media Offical Colors
+05- Cross Browser Compatibility
+06- Header
+07- Sticky Header
+08- Responsive Header
+09- Slider Sec
+10- Page Feature
+11- Fun Facts
+12- Video Sec
+13- Pulse Animation
+14- Sec Title
+15- Team Sec
+16- Amazing Features
+17- App ScreenShots
+18- Testimonials Sec
+19- FAQ Sec
+20- Keep In Touch Sec
+21- Newsletter
+22- Footer
+23- Recent News
+24- New Featured Areas Style
+  24.1- Featured Area Style 1
+  24.2- App Shocase
+  24.3- Parallax Zoom Slices
+  24.4- Particle Effect Two
+25- Blog Detail
+26- Team Detail
+27- 404 Error Page
 
-    <!-- Vendor: Bootstrap 4 Stylesheets  -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
-    <!-- Our Website CSS Styles -->
-    <link rel="stylesheet" href="css/icons.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/color.css" type="text/css">
-    <link rel="stylesheet" href="css/responsive.css" type="text/css">
-</head>
-<body>
-    <!-- Our Website Content Goes Here -->
-    <main>
-        <header class="stck">
-            <div class="container">
-                <div class="mnu-sc">
-                    <div class="logo">
-                        <h1><a href="index2.html" title="">M-SHAURI</a></h1>
-                    </div>
-                    <nav class="one-page-func">
-                        <div class="hdr-scl">
-                            <a class="brd-rd50" href="#" title=""><i class="fa fa-facebook"></i></a>
-                            <a class="brd-rd50" href="#" title=""><i class="fa fa-twitter"></i></a>
-                            <a class="brd-rd50" href="#" title=""><i class="fa fa-google-plus"></i></a>
-                            <a class="brd-rd50" href="#" title=""><i class="fa fa-vimeo"></i></a>
-                        </div>
-                        <ul>
-                            <li><a href="#home" title="">Home</a></li>
-                            <li><a href="#services" title="">Services</a></li>
-                            <li><a href="#about" title="">About Us</a></li>
-                            <li><a href="#team" title="">Team</a></li>
-                            <li><a href="#features" title="">Features</a></li>
-                            <li><a href="#news" title="">News</a></li>
-                            <li><a href="investment-ratings.html" title="">Ratings</a></li>
-                            <li><a href="#contact" title="">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header><!-- Header -->
-        <div class="rpnsv-hdr">
-            <div class="rspnsv-lg-br">
-                <div class="logo">
-                    <h1><a href="index2.html" title="">M-SHAURI</a></h1>
-                </div>
-                 <span class="mnu-btn brd-rd5"><i class="fa fa-align-justify"></i></span>
-            </div>
-            <div class="rspnsv-mnu blue-bg">
-                <span class="cls-btn"><i class="fa fa-close"></i></span>
-                <ul>
-                    <li><a href="#home" title="">Home</a></li>
-                    <li><a href="#services" title="">Services</a></li>
-                    <li><a href="#about" title="">About Us</a></li>
-                    <li><a href="#team" title="">Team</a></li>
-                    <li><a href="#features" title="">Features</a></li>
-                    <li><a href="#news" title="">News</a></li>
-                    <li><a href="investment-ratings.html" title="">Ratings</a></li>
-                    <li><a href="#contact" title="">Contact</a></li>
-                </ul>
-            </div>
-        </div><!-- Responsive Header -->
-        <section id="home">
-            <div class="gp nogp">
-                <div class="feat-wrp2">
-                    <canvas class="scene scene--full" id="scene"></canvas>
-                    <script type="x-shader/x-vertex" id="wrapVertexShader">
-                        attribute float size;
-                        attribute vec3 color;
-                        varying vec3 vColor;
-                        void main() {
-                            vColor = color;
-                            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-                            gl_PointSize = size * ( 350.0 / - mvPosition.z );
-                            gl_Position = projectionMatrix * mvPosition;
-                        }
-                    </script>
-                    <script type="x-shader/x-fragment" id="wrapFragmentShader">
-                        varying vec3 vColor;
-                        uniform sampler2D texture;
-                        void main(){
-                            vec4 textureColor = texture2D( texture, gl_PointCoord );
-                            if ( textureColor.a < 0.3 ) discard;
-                            vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
-                            gl_FragColor = color;
-                        }
-                    </script>
-                    <div class="feat-cap-inr">
-                        <h1>Discover</h1>
-                        <span class="blue-bg">Our Featured Templates of this week</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="services">
-            <div class="gp gry-bg">
-                <div class="skw-shp-tp rgt"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="tlt-txt text-center">
-                                <div class="tlt-txt-innr">
-                                    <h2>Let's turn your idea into <br> a <i class="blue-clr">scalable business!</i></h2>
-                                    <p>Financial literacy |
-                                        Business development |
-                                        Market linkages |
-                                        Access to finance |
-                                        Capacity building |
-                                        Mentorship
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="rmv-ext">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn1.png" alt="" /></i>
-                                            <h4>Insights Engine</h4>
-                                            <p>Understand your money (spending, saving, earning)</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn2.png" alt="" /></i>
-                                            <h4>Financial Literacy Hub</h4>
-                                            <p>Learn how money works, in your language</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn3.png" alt="" /></i>
-                                            <h4>Wealth Pathways</h4>
-                                            <p>Micro-investments, savings goals, side hustle funding</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn4.png" alt="" /></i>
-                                            <h4>Risk Guardrails</h4>
-                                            <p>Insurance-backed investment protection, fraud monitoring</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn5.png" alt="" /></i>
-                                            <h4>Social Layer</h4>
-                                            <p>Challenges, badges, rankings, shared wins</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="fea-bx brd-rd5 text-center">
-                                            <i><img src="images/resource/fea-icn6.png" alt="" /></i>
-                                            <h4>Growth Loops
 
-                                            </h4>
-                                            <p>Referrals, streaks, real-time progress bars
-                                            
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vw-al text-center"><a class="brd-rd40 clk-scrl" href="#contact" title="">CONTACT US <i class="fa fa-angle-right brd-rd50"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skw-shp-bp rgt"></div>
-            </div>
-        </section>
-        <section>
-            <div class="gp">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="chs-wrp">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="tlt-txt">
-                                            <div class="tlt-txt-innr">
-                                                <h2>Why <i class="blue-clr">Choose US</i></h2>
-                                                <p>M-Shauri is not just another fintech app — it is a full-stack financial empowerment platform built into the Mobile Money ecosystem.</p>
-                                            </div>
-                                        </div>
-                                        <div id="acordn" class="faq-wrp">
-                                            <div class="acordn-itm">
-                                                <h4>Unified Financial Ecosystem <i class="fa fa-arrow-down"></i></h4>
-                                                <div class="acrdn-cnt">
-                                                    <p>Unlike other platforms that offer only lending, saving, or investing, M-Shauri aggregates and personalizes all financial needs in one space — saving, investing, budgeting, credit access, insurance, and learning — all powered by AI and connected to the user’s Mobile Money history.</p>
-                                                </div>
-                                            </div>
-                                            <div class="acordn-itm">
-                                                <h4>Built Natively for Mobile Money Users <i class="fa fa-arrow-down"></i></h4>
-                                                <div class="acrdn-cnt">
-                                                    <p>M-Shauri interprets real Mobile Money transaction data to generate financial insights. No need for users to link bank accounts or upload CSVs. Our system lives where their money lives. </p>
-                                                </div>
-                                            </div>
-                                            <div class="acordn-itm">
-                                                <h4> AI Personalization at the Core <i class="fa fa-arrow-down"></i></h4>
-                                                <div class="acrdn-cnt">
-                                                    <p>Every user journey is dynamically personalized — budgets, goals, recommendations, and even investment pathways change based on behavior, milestones, and aspirations.
-. </p>
-                                                </div>
-                                            </div>
-                                            <div class="acordn-itm">
-                                                <h4>✅ Financial Literacy Meets Gamification <i class="fa fa-arrow-down"></i></h4>
-                                                <div class="acrdn-cnt">
-                                                    <p>We merge education and motivation, rewarding users for learning, saving, and improving. From badges and community savings challenges to personalized “Mobile Money Wraps,” finance becomes shareable and aspirational. </p>
-                                                </div>
-                                            </div>
-                                        </div><!-- Accordions  -->                                    
-                                    </div>
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="chr-mckp">
-                                            <img src="images/resource/why-chs-mckp.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="gp nogp wht-lyr opc8">
-                <div class="parlx img-btm" style="background-image: url(images/parlx-bg3.png);"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="tlt-txt text-center">
-                                <div class="tlt-txt-innr">
-                                    <i><img src="images/resource/icon1.png" alt=""></i>
-                                    <h2>What Regulators Are Saying
-</h2>
-<p>“You’re not building just another MMF app.
-     You’re building the operating system where all these services meet.”</p><p>
+===================================================== ***/
 
-     <p>
- Hillary James– Regulatory sandbox, Capital Markets Authority (CMA), Kenya
-</p>
-                                </div>
-                            </div>
-                            <div class="strt-btns text-center">
-                                <a class="blue-bg brd-rd30" href="#" title=""><i class="fa fa-android"></i> <span><i>Available on</i> Google Store</span></a>
-                                <a class="brd-rd30" href="#" title=""><i class="fa fa-apple"></i> <span><i>Available on</i> Apple Store</span></a>
-                            </div>
-                            <div class="funfacts-wrp">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 col-lg-3">
-                                        <div class="fact-bx">
-                                            <i class="ion-android-open blue-clr brd-rd50"></i>
-                                            <div class="fact-bx-innr">
-                                                <h3><span class="counter">39812</span></h3>
-                                                <span>Apps Download</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 col-lg-3">
-                                        <div class="fact-bx">
-                                            <i class="ion-android-hand blue-clr brd-rd50"></i>
-                                            <div class="fact-bx-innr">
-                                                <h3><span class="counter">5000</span></h3>
-                                                <span>Company Clients</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 col-lg-3">
-                                        <div class="fact-bx">
-                                            <i class="fa fa-trophy blue-clr brd-rd50"></i>
-                                            <div class="fact-bx-innr">
-                                                <h3><span class="counter">150</span></h3>
-                                                <span>Company Awards</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 col-lg-3">
-                                        <div class="fact-bx">
-                                            <i class="fa fa-send-o blue-clr brd-rd50"></i>
-                                            <div class="fact-bx-innr">
-                                                <h3><span class="counter">100</span>+</h3>
-                                                <span>Complete Projects</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vdo-sec text-center">
-                                <img src="images/resource/vdo-bg.jpg" alt="">
-                                <div class="vdo-sec-innr">
-                                    <i>Landing Pages Made Easy</i>
-                                    <h3>A Powerful Platform for Landing <br> Pages that Convert</h3>
-                                    <span class="lightbox"><a class="brd-rd50 blue-clr" href="https://vimeo.com/37475108" title="" data-poptrox="vimeo,800x480"><i class="fa fa-play-circle"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="gp tp320">
-                <div class="skw-shp-tp rgt"></div>
-                <img class="bg-shp cntr" src="images/bg-shp2.png" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="sec-tl-wrp text-center">
-                                <div class="sec-tl-innr">
-                                    <h2>Great Screenshots</h2>
-                                    <span>Best & Clean Landing Page with Unique Idea</span>
-                                    <i class="tl-shp"><i class="tl-shp-inr"></i></i>
-                                </div>
-                            </div>
-                            <div class="app-scrn-wrp" style="background-image: url(images/resource/scrn-frm.png);">
-                                <div class="app-scrn-caro">
-                                    <div class="app-itm">
-                                        <img src="images/resource/scrn1.jpg" alt="">
-                                    </div>
-                                    <div class="app-itm">
-                                        <img src="images/resource/scrn2.jpg" alt="">
-                                    </div>
-                                    <div class="app-itm">
-                                        <img src="images/resource/scrn3.jpg" alt="">
-                                    </div>
-                                    <div class="app-itm">
-                                        <img src="images/resource/scrn4.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="gp thm-lyr opc6">
-                <div class="parlx" style="background-image: url(images/parlx-bg3.jpg);"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="nws-ltr-wrp text-center">
-                                <div class="nws-ltr-inr">
-                                    <div class="nws-ltr-tl">
-                                        <i><img src="images/resource/nws-ltr-icn.png" alt=""></i>
-                                        <div class="nws-ltr-tl-inr">
-                                            <h3>Subscribe Our Newsletter</h3>
-                                            <span>Sign up Here get the latest news, updates</span>
-                                        </div>
-                                    </div>
-                                    <form class="nws-ltr-frm brd-rd40">
-                                        <input class="brd-rd40" type="email" placeholder="Enter Your Email Address.....">
-                                        <button type="submit"><i class="fa fa-arrow-right"></i></button>
-                                    </form>
-                                </div>
-                            </div><!-- Newsletter Wrapper -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="team">
-            <div class="gp bp175">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="sec-tl-wrp text-center">
-                                <div class="sec-tl-innr">
-                                    <h2>Meet Awesome Team</h2>
-                                    <span>Best & Clean Landing Page with Unique Idea</span>
-                                    <i class="tl-shp"><i class="tl-shp-inr"></i></i>
-                                </div>
-                            </div>
-                            <div class="rmv-ext">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="membr-wrp text-center">
-                                            <div class="membr-innr">
-                                                <img src="images/resource/member1.jpg" alt="" />
-                                                <div class="membr-inf">
-                                                    <h4><a href="team-detail.html" title="">QLARK WILLIMES</a></h4>
-                                                    <span class="blue-clr">Co-Founder</span>
-                                                    <div class="scl-inf">
-                                                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" title="Vimeo" target="_blank"><i class="fa fa-vimeo"></i></a>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor uIL sit am pellen erat Maecenas cenasgue ut eget secte pellentesque…</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="membr-wrp text-center">
-                                            <div class="membr-innr">
-                                                <img src="images/resource/member2.jpg" alt="" />
-                                                <div class="membr-inf">
-                                                    <h4><a href="team-detail.html" title="">WILLIMES JOHN</a></h4>
-                                                    <span class="blue-clr">Co-Founder</span>
-                                                    <div class="scl-inf">
-                                                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" title="Vimeo" target="_blank"><i class="fa fa-vimeo"></i></a>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor uIL sit am pellen erat Maecenas cenasgue ut eget secte pellentesque…</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="membr-wrp text-center">
-                                            <div class="membr-innr">
-                                                <img src="images/resource/member3.jpg" alt="" />
-                                                <div class="membr-inf">
-                                                    <h4><a href="team-detail.html" title="">DOMINUS WATSON</a></h4>
-                                                    <span class="blue-clr">Co-Founder</span>
-                                                    <div class="scl-inf">
-                                                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" title="Vimeo" target="_blank"><i class="fa fa-vimeo"></i></a>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor uIL sit am pellen erat Maecenas cenasgue ut eget secte pellentesque…</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vw-al text-center"><a class="brd-rd40" href="team.html" title="">VIEW ALL TEAM <i class="fa fa-angle-right brd-rd50"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="features">
-            <div class="gp gry-lyr hg-opc">
-                <div class="skw-shp-tp lft"></div>
-                <div class="parlx" style="background-image: url(images/parlx-bg1.jpg);"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="amz-fea">
-                                <div class="row">
-                                    <div class="col-md-5 col-sm-6 hidden-sm-down col-lg-5">
-                                        <div class="amz-mckp"><img src="images/resource/amz-mckp1.png" alt="" /></div>
-                                    </div>
-                                    <div class="col-md-7 col-sm-12 col-lg-7">
-                                        <div class="amz-tl">
-                                            <h2>M-shauri <i class="blue-clr">Amazing Features</i></h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur ili adipiscing Donec nec eros eget elit Donec nec eros eget adipiscing Ulimes gue ut eget…</p>
-                                        </div>
-                                        <div class="fea-wrp">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-lg-6">
-                                                    <div class="fea-bx2">
-                                                        <i class="ion-laptop blue-clr"></i>
-                                                        <div class="fea-innr">
-                                                            <h5>HIGH RESOLUTION</h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara incidid labore.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6 col-lg-6">
-                                                    <div class="fea-bx2">
-                                                        <i class="ion-settings blue-clr"></i>
-                                                        <div class="fea-innr">
-                                                            <h5>ULTIMITED FEATURES</h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara incidid labore.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6 col-lg-6">
-                                                    <div class="fea-bx2">
-                                                        <i class="ion-person-stalker blue-clr"></i>
-                                                        <div class="fea-innr">
-                                                            <h5>FREE SUPPORT</h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara incidid labore.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6 col-lg-6">
-                                                    <div class="fea-bx2">
-                                                        <i class="ion-ios-list-outline blue-clr"></i>
-                                                        <div class="fea-innr">
-                                                            <h5>CLEAN CODES</h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara incidid labore.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="news">
-            <div class="gp">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="sec-tl-wrp text-center">
-                                <div class="sec-tl-innr">
-                                    <h2>Recent News</h2>
-                                    <span>Best & Clean Landing Page with Unique Idea</span>
-                                    <i class="tl-shp"><i class="tl-shp-inr"></i></i>
-                                </div>
-                            </div>
-                            <div class="rmv-ext">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="rcnt-nws text-center">
-                                            <div class="rcnt-thmb">
-                                                <a href="blog-detail.html" title=""><img src="images/resource/rcnt-nws-img1.jpg" alt=""></a>
-                                            </div>
-                                            <div class="nws-inf">
-                                                <div class="mta">
-                                                    <span>8 Comments</span>
-                                                    <span>245 Views</span>
-                                                </div>
-                                                <h4><a href="blog-detail.html" title="">Explore These Stunning Small Business</a></h4>
-                                                <span class="pst-athr blue-clr brd-rd30">Posted by Willimes Smith</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="rcnt-nws text-center">
-                                            <div class="rcnt-thmb">
-                                                <a href="blog-detail.html" title=""><img src="images/resource/rcnt-nws-img2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="nws-inf">
-                                                <div class="mta">
-                                                    <span>8 Comments</span>
-                                                    <span>245 Views</span>
-                                                </div>
-                                                <h4><a href="blog-detail.html" title="">Boriosam sunt consectetur, assumenda provident</a></h4>
-                                                <span class="pst-athr blue-clr brd-rd30">Posted by Willimes Smith</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-lg-4">
-                                        <div class="rcnt-nws text-center">
-                                            <div class="rcnt-thmb">
-                                                <a href="blog-detail.html" title=""><img src="images/resource/rcnt-nws-img3.jpg" alt=""></a>
-                                            </div>
-                                            <div class="nws-inf">
-                                                <div class="mta">
-                                                    <span>8 Comments</span>
-                                                    <span>245 Views</span>
-                                                </div>
-                                                <h4><a href="blog-detail.html" title="">Provident lorem amet, con sectetur Adipisicing</a></h4>
-                                                <span class="pst-athr blue-clr brd-rd30">Posted by Willimes Smith</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vw-al text-center"><a class="brd-rd40" href="blog.html" title="">VIEW ALL NEWS <i class="fa fa-angle-right brd-rd50"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="gp notp">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="testi-caro-wrp">
-                                <div class="testi-caro-innr">
-                                    <div class="testi-bx">
-                                        <img class="brd-rd50" src="images/resource/tasti1.jpg" alt="" />
-                                        <div class="testi-bx-innr">
-                                            <p>Excepteur sint occaecat cupidtat non proident, tempor incididunt Excepteur sint occaecat cup sed do eiusmo lorimes tempor labore..</p>
-                                            <h4>THOMAS DOE</h4> <i class="blue-clr">Graphic Designer</i>
-                                        </div>
-                                    </div>
-                                    <div class="testi-bx">
-                                        <img class="brd-rd50" src="images/resource/tasti2.jpg" alt="" />
-                                        <div class="testi-bx-innr">
-                                            <p>Excepteur sint occaecat cupidtat non proident, tempor incididunt Excepteur sint occaecat cup sed do eiusmo lorimes tempor labore..</p>
-                                            <h4>THOMAS DOE</h4> <i class="blue-clr">Graphic Designer</i>
-                                        </div>
-                                    </div>
-                                    <div class="testi-bx">
-                                        <img class="brd-rd50" src="images/resource/tasti3.jpg" alt="" />
-                                        <div class="testi-bx-innr">
-                                            <p>Excepteur sint occaecat cupidtat non proident, tempor incididunt Excepteur sint occaecat cup sed do eiusmo lorimes tempor labore..</p>
-                                            <h4>THOMAS DOE</h4> <i class="blue-clr">Graphic Designer</i>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="gp nogp">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-lg-12">
-                        <div class="gmp" id="gmp"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="cont-wrp ovrlp-200 ovrlp-bp-200">
-                                <div class="row mrg">
-                                    <div class="col-md-4 col-sm-12 col-lg-4">
-                                        <div class="cnt-inf">
-                                            <div class="cnt-inf-tl">
-                                                <h4>GET IN TOUCH</h4>
-                                            </div>
-                                            <div class="cnt-inf-lst">
-                                                <p><span class="blue-clr">Email:</span> info@hotel.com</p>
-                                                <p><span class="blue-clr">Phone Number:</span> +34 928 514200</p>
-                                                <p><span class="blue-clr">Office Number:</span> 1 (800) 555-4453</p>
-                                                <p><span class="blue-clr">Fax:</span> +34 928 513080</p>
-                                                <p class="adr">25 Street no doky street 2440/x New Villa 14X USA</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-12 col-lg-8">
-                                        <form class="cnt-frm text-center" action="https://formsubmit.co/your-email@example.com" method="POST">
-                                            <input type="hidden" name="_subject" value="New Contact Form Submission from M-SHAURI">
-                                            <input type="hidden" name="_autoresponse" value="Thank you for contacting M-SHAURI! We have received your message and will get back to you soon.">
-                                            <input type="hidden" name="_next" value="https://your-site.com/thank-you.html">
-                                            <div class="row mrg10">
-                                                <div class="col-md-4 col-sm-4 col-lg-4"><input class="brd-rd30" type="text" name="name" Placeholder="Complete Name *" required /></div>
-                                                <div class="col-md-4 col-sm-4 col-lg-4"><input class="brd-rd30" type="email" name="email" Placeholder="Email Address *" required /></div>
-                                                <div class="col-md-4 col-sm-4 col-lg-4"><input class="brd-rd30" type="text" name="subject" Placeholder="Subject *" required /></div>
-                                                <div class="col-md-12 col-sm-12 col-lg-12"><textarea class="brd-rd30" name="message" Placeholder="Your Message *" required></textarea> <button class="brd-rd30" type="submit">SEND MESSAGE</button></div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="gp tp315">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12">
-                            <div class="ftr-wrp text-center">
-                                <div class="ftr-innr">
-                                    <h1>M<span>-SHAURI</span></h1>
-                                    <p>People who succeed have momentum. The more they succeed, the more they want to succeed, and the more they find a way to succeed.</p>
-                                    <span><i class="blue-clr">Copyright &copy; 2026 <a href="#" title="">M-SHAURI</a></i> | All Rights Reserved</span>
-                                    <div class="ft-scl">
-                                        <a class="facebook scl-btn brd-rd50" href="#" title="" target="_blank"><i class="fa fa-facebook"></i></a>
-                                        <a class="twitter scl-btn brd-rd50" href="#" title="" target="_blank"><i class="fa fa-twitter"></i></a>
-                                        <a class="google scl-btn brd-rd50" href="#" title="" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                        <a class="vimeo scl-btn brd-rd50" href="#" title="" target="_blank"><i class="fa fa-vimeo"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
+/*===== Google Fonts =====*/
+@import url(https://fonts.googleapis.com/css?family=Bowlby+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+@font-face {
+  font-family: oem;
+  src: url('../fonts/8514oem.eot');
+  src: url('../fonts/8514oem.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/8514oem.woff2') format('woff2'),
+       url('../fonts/8514oem.woff') format('woff'),
+       url('../fonts/8514oem.ttf')  format('truetype'),
+       url('../fonts/8514oem.svg#svgFontName') format('svg');
+}
 
-    <!-- Vendor: Javascripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+/*===== Plugin Stylesheets Import =====*/
+@import url(animate.css);
 
-    <!-- Our Website Javascripts -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.counterup.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/scroll-up-bar.min.js"></script>
-    <script src="js/jquery.poptrox.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4XGd9qpQIEkbfL6QpR6qk2jQ9S9_5Uww"></script>
-    <script src="js/demo.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/demo1.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+/*===== General Styling =====*/
+html, body{overflow-x:hidden;}
+body {
+  float: left;
+  font-family: poppins;
+  letter-spacing: 0.3px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family:poppins;
+  color:#333;
+}
+p{
+  font-family:poppins;
+  color:#666;
+  line-height:30px;
+  font-size:16px;
+  letter-spacing:0;
+}
+ul li,
+ol li{
+  font-family:poppins;
+  color:#666;
+  font-size:13px;
+  line-height:20px;
+}
+a {color: inherit;}
+a:hover,
+a:focus{
+  text-decoration:none;
+  outline:none;
+}
+iframe {
+  border: 0;
+  float: left;
+  width: 100%;
+}
+input,
+textarea,
+select,
+button {border: 0;}
+button,
+input[type="submit"],
+.fileContainer,
+input[type="file"] {cursor: pointer;}
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+a:focus,
+.form-wrp fieldset p a:focus,
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+textarea {resize: none;}
+main {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+main.boxed {
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -ms-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  float: none;
+  margin: 0 auto;
+  width: 1230px;
+}
+section{
+  float:left;
+  position:relative;
+  width:100%;
+}
+.gp {
+  float: left;
+  padding: 120px 0;
+  position: relative;
+  width: 100%;
+}
+.lsgp,
+.gp.lsgp {padding: 70px 0;}
+.tp375,
+.gp.tp375 {padding-top: 375px;}
+.bp375,
+.gp.bp375 {padding-bottom: 375px;}
+.tp320,
+.gp.tp320 {padding-top: 320px;}
+.bp320,
+.gp.bp320 {padding-bottom: 320px;}
+.tp270,
+.gp.tp270 {padding-top: 270px;}
+.bp270,
+.gp.bp270 {padding-bottom: 270px;}
+.tp235,
+.gp.tp235 {padding-top: 235px;}
+.bp235,
+.gp.bp235 {padding-bottom: 235px;}
+.tp220,
+.gp.tp220 {padding-top: 220px;}
+.bp220,
+.gp.bp220 {padding-bottom: 220px;}
+.tp175,
+.gp.tp175 {padding-top: 175px;}
+.bp175,
+.gp.bp175 {padding-bottom: 175px;}
+.tp140,
+.gp.tp140 {padding-top: 140px;}
+.bp140,
+.gp.bp140 {padding-bottom: 140px;}
+.tp340,
+.gp.tp340 {padding-top: 340px;}
+.tp315,
+.gp.tp315 {padding-top: 315px;}
+.notp,
+.gp.notp {padding-top: 0;}
+.nobp,
+.gp.nobp {padding-bottom: 0;}
+.nogp,
+.gp.nogp {padding: 0;}
+.gry-bg {background-color: #f3f2f2;}
+.container {
+  padding: 0;
+  width:1170px;
+}
+.ovrlp-175 {margin-top: -175px;}
+.ovrlp-200 {margin-top: -200px;}
+.ovrlp-bp-200 {margin-bottom: -200px;}
+.ovrlp-275 {margin-top: -275px;}
+.ovrlp-330 {margin-top: -330px;}
+.mrg {margin: 0;}
+.mrg > div {padding: 0;}
+.mrg5 {margin: 0 -2.5px;}
+.mrg5 > div {padding: 0 2.5px;}
+.mrg10 {margin: 0 -5px;}
+.mrg10 > div {padding: 0 5px;}
+.rmv-ext {
+  float: left;
+  margin-bottom: -30px;
+  width: 100%;
+}
+.parlx,
+.fxd-bg{
+  background-position: center;
+  height:100%;
+  width:100%;
+  margin:0;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+.fxd-bg{
+  background-attachment:fixed !important;
+  background-size:cover!important;
+}
+.parlx {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parlx.patern-bg{background-repeat:repeat !important;}
+.img-btm {
+  background-position: bottom center;
+  top: auto;
+  bottom: 0;
+  background-repeat: no-repeat;
+}
+.blc-lyr:before, 
+.wht-lyr:before,
+.drk-blu-lyr:before,
+.gry-lyr:before,
+.thm-lyr:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.wht-lyr:before{background-color:#fff;}
+.blc-lyr:before {background-color: #000000;}
+.thm-lyr:before {
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+}
+.gry-lyr:before {background-color: #fbfbfb;}
+.drk-blu-lyr:before {background-color: #0e0623;}
+.hg-opc:before {opacity: .95;}
+.opc8:before {opacity: .8;}
+.opc6:before {opacity: .6;}
+.md-opc:before {opacity: .85;}
+.lw-opc:before {opacity: .75;}
+.parlx80:before,
+.parlx80 .parlx {height: 80%;}
+iframe{
+  border:0;
+  width:100%;
+  float:left;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.bg-shp {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.bg-shp.rgt {
+  bottom: -200px;
+  right: -110px;
+}
+.bg-shp.cntr {left: 50%;}
+/*===== Social Media Offical Colors =====*/
+.scl-btn2 {color: #ffffff;}
+a.facebook,
+a.facebook-clr:hover{
+  background:#3b5998;
+  border-color:#3b5998;
+}
+a.facebook-clr,
+a.facebook:hover{
+  border-color:#3b5998;
+  color:#3b5998;
+}
+a.twitter,
+a.twitter-clr:hover{
+  background:#55acee;
+  border-color:#55acee;
+}
+a.twitter-clr,
+a.twitter:hover{
+  border-color:#55acee;
+  color:#55acee;
+}
+a.google,
+a.google-clr:hover{
+  background:#dd4b39;
+  border-color:#dd4b39;
+}
+a.google-clr,
+a.google:hover{
+  border-color:#dd4b39;
+  color:#dd4b39;
+}
+a.vimeo,
+a.vimeo-clr:hover{
+  background:#44bbff;
+  border-color:#44bbff;
+}
+a.vimeo-clr,
+a.vimeo:hover{
+  border-color:#44bbff;
+  color:#44bbff;
+}
+
+/*===== Cross Browser Compatibility =====*/
+a,
+input,
+button,
+:before,
+:after,
+.membr-inf,
+.membr-inf > h4,
+.membr-inf > span,
+.membr-inf > p,
+.scl-inf,
+.owl-nav > div,
+.owl-dots > div,
+.acordn-itm,
+.acordn-itm > h4,
+header *,
+.app-itm,
+.app-itm > img,
+.fea-btns > a i,
+.mnu-sc,
+.hdr-scl,
+nav > ul > li,
+.logo img,
+.rspnsv-mnu,
+.mnu-btn,
+.cls-btn,
+ul li,
+ul,
+img,
+span,
+.hdr6-mnu-wwrp,
+.mnu-cls-btn
+{
+  -webkit-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.membr-wrp:hover .membr-inf,
+.owl-carousel .owl-nav > div,
+.nwsltr-frm button,
+.pg-srch-frm > button
+{
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bg-shp.cntr,
+.comment-reply-link
+{
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.vdo-sec-innr,
+.feat-cap-inr,
+.video-thumb > a,
+.mbr-inf-inr
+{
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.brd-rd50,
+.owl-dots > div,
+.sec-tl-innr .tl-shp::before,
+.sec-tl-innr .tl-shp::after,
+.sec-tl-innr .tl-shp-inr::before,
+.mbr-scil > li a
+{
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.brd-rd40
+{
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+}
+
+.brd-rd30,
+.tagcloud > a,
+.tagcloud > a:before,
+.reply-comment > form input, 
+.reply-comment > form textarea,
+.btn1,
+.pg-srch-frm > input
+{
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.brd-rd5,
+.widget ul,
+.widget ul li span,
+.tagcloud,
+.mbr-cnt > li i
+{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.brd-rd3,
+.share > a,
+.share > a:before
+{
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.brd-rd0 {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.purpl-bg {background-color: #9c27b0;}
+.yello-bg {background-color: #f3aa36;}
+.blue2-bg {background-color: #3980f9;}
+/*===== Page Style =====*/
+
+/*===== Header =====*/
+header {
+  background-color: #fff;
+  float: left;
+  width: 100%;
+  z-index: 9999;
+}
+header.stck {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.mnu-sc {
+  float: left;
+  width: 1300px;
+  margin-left: -65px;
+  border-bottom: 1px solid rgba(255,255,255,.56);
+  padding: 0 20px 0 65px;
+  display: table;
+}
+.logo {
+  display: table-cell;
+  vertical-align: middle;
+  width: 19%;
+}
+nav {
+  display: table-cell;
+  vertical-align: middle;
+}
+.logo > h1 {margin: 0;}
+nav > ul {
+  display: inline-block;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  vertical-align: middle;
+  float: right;
+  margin-right: 40px;
+}
+nav > ul > li {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 90px;
+  margin-bottom: -1px;
+}
+nav > ul > li > a {
+  display: block;
+  padding: 0 23px;
+}
+nav > ul > li:hover > a,
+nav > ul > li > a:focus,
+nav ul > li > a.active {color: #fff;}
+.hdr-scl {
+  float: right;
+  vertical-align: middle;
+  margin-top: 25px;
+}
+.hdr-scl > a {
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  color: #333;
+  background-color: rgba(0,0,0,.15);
+  font-size: 11px;
+}
+/*===== Sticky Header =====*/
+header.stcky {
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.08);
+  -ms-box-shadow: 0 0 10px rgba(0,0,0,.08);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,.08);
+  box-shadow: 0 0 10px rgba(0,0,0,.08);
+}
+header.stcky .mnu-sc {
+  padding: 0;
+  border-bottom-color: transparent;
+  width: 100%;
+  display: block;
+  margin-left: 0;
+}
+header.stcky nav > ul > li {line-height: 60px;}
+header.stcky .logo img {width: 50%;}
+header.stcky .hdr-scl {margin-top: 10px;}
+/*===== Responsive Header =====*/
+.rpnsv-hdr {
+  float: left;
+  width: 100%;
+  position: relative;
+  display: none;
+  padding: 10px 15px;
+  background-color: #fbfbfb;
+  z-index: 2;
+}
+.rspnsv-lg-br {
+  float: left;
+  width: 100%;
+}
+.rspnsv-lg-br > .logo {
+  float: left;
+  width: 35%;
+}
+.rspnsv-lg-br > span {
+  float: right;
+  font-size: 12px;
+  line-height: 35px;
+  width: 35px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.rspnsv-mnu {
+  position: fixed;
+  right: -250px;
+  width: 250px;
+  padding: 70px 30px 30px;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.rspnsv-mnu > ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  float: left;
+  width: 100%;
+}
+.rspnsv-mnu > span {
+  cursor: pointer;
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  background-color: #333;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  right: 10px;
+  top: 10px;
+}
+.rspnsv-mnu > ul li {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding-bottom: 8px;
+}
+.rspnsv-mnu > ul li + li {margin-top: 8px;}
+.rspnsv-mnu > ul li:hover > a {color: #333;}
+.rspnsv-mnu > ul li a {display: block;}
+.rspnsv-mnu > ul li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.rspnsv-mnu.sldin {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+/*===== Slider Sec =====*/
+.feat-wrp {
+  float: left;
+  padding-top: 90px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.feat-cap {
+  float: left;
+  width: 100%;
+  padding-left: 70px;
+  margin-top: 85px;
+}
+.feat-cap > h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.2px;
+  margin-bottom: 20px;
+}
+.feat-cap > h2 span {font-weight: 400;}
+.feat-cap > h3 {
+  font-size: 45px;
+  color: #fff;
+  line-height: 60px;
+  letter-spacing: 0;
+}
+.fea-btns {
+  float: left;
+  width: 100%;
+  margin-top: 40px;
+}
+.fea-btns > a {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 8px 8px 8px 40px;
+  font-family: poppins;
+  font-weight: 700;
+  border: 2px solid #fff;
+  background-color: #fff;
+  letter-spacing: 0;
+  font-size: 13px;
+  color: #0d0d0d;
+  margin-right: 5px;
+}
+.fea-btns > a.no-bg:hover {
+  background-color: #fff;
+  color: #0d0d0d;
+}
+.fea-btns > a.no-bg:hover i {color: #fff;}
+.fea-btns > a i {
+  margin-left: 30px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.fea-btns > a i,
+.fea-btns > a.no-bg:hover i {
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+}
+.fea-btns > a.no-bg,
+.fea-btns > a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.fea-btns > a.no-bg i,
+.fea-btns > a:hover i {
+  background-color: #fff;
+  background-image: none;
+  color: #0d0d0d;
+}
+/*===== Page Feature =====*/
+.fea-bx {
+  background-color: #f3f2f2;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 90px 50px 70px;
+  -webkit-box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  -ms-box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  -o-box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+}
+.gry-bg .fea-bx {background-color: #fff;}
+.fea-bx i {
+  display: inline-block;
+  margin-bottom: 35px;
+  font-size: 50px;
+  color: #ffffff;
+}
+.fea-bx > h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+.fea-bx > p {
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.strt-btns {
+  float: left;
+  width: 100%;
+}
+.strt-btns > a, 
+.strt-btns > a.blue-bg:hover,
+.cnt-frm button:hover,
+.cnt-frm button:focus {
+  background-color: #282828;
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+}
+.strt-btns > a {
+  display: inline-block;
+  margin: 10px 5px 0;
+  color: #ffffff;
+  padding: 17px 45px;
+  letter-spacing: 0;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.strt-btns > a > i {
+  font-size: 34px;
+  float: left;
+  margin-right: 13px;
+}
+.strt-btns > a > span {
+  display: table;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 20px;
+}
+.strt-btns > a > span i {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: initial;
+  display: block;
+}
+/*===== Fun Facts =====*/
+.funfacts-wrp {
+  float: left;
+  width: 100%;
+  padding: 0 70px;
+  margin-top: 60px;
+}
+.fact-bx {
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+}
+.fact-bx > i {
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+  background-color: #fff;
+  width: 70px;
+  line-height: 70px;
+  font-size: 32px;
+  -webkit-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -ms-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -o-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  margin-top: 2px;
+}
+.fact-bx-innr {
+  display: table;
+  margin-top: 10px;
+}
+.fact-bx-innr > h3 {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  margin-bottom: 0;
+  color: #444;
+}
+.lgt .fact-bx-innr > h3 {color: #ffffff;}
+.fact-bx-innr > span {
+  font-size: 13px;
+  letter-spacing: .3px;
+  color: #666;
+}
+.lgt .fact-bx-innr > span {color: #929292;}
+/*===== Video Sec =====*/
+.vdo-sec {
+  float: left;
+  position: relative;
+  margin: 120px 0 -210px -45px;
+  width: 1260px;
+  z-index: 1;
+}
+.vdo-sec:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: .5;
+}
+.vdo-sec-innr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 61%;
+  width: 100%;
+}
+.vdo-sec-innr > i {
+  font-style: normal;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 0;
+}
+.vdo-sec-innr > h3 {
+  font-weight: 700;
+  color: #fff;
+  font-size: 38px;
+  letter-spacing: -.2px;
+  line-height: 48px;
+  margin: 20px 0 0;
+}
+.vdo-sec-innr > span {
+  display: inline-block;
+  margin-top: 50px;
+}
+.vdo-sec-innr > span > a {
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  line-height: 100px;
+  width: 100px;
+  font-size: 51px;
+}
+/*background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+.vdo-sec-innr > span > a:hover {color: #fff;}
+.vdo-sec-innr > span > a::before,
+.vdo-sec-innr > span > a:after {
+  position: absolute;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,.1);
+  content: "";
+  -webkit-animation: pulse 1s linear infinite;
+  -ms-animation: pulse 1s linear infinite;
+  -o-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
+}
+.vdo-sec-innr > span > a:before {
+  left: -35px;
+  right: -35px;
+  top: -35px;
+  bottom: -35px;
+}
+.vdo-sec-innr > span > a::after {
+  left: -72px;
+  right: -72px;
+  top: -72px;
+  bottom: -72px;
+}
+/*=== Pulse Animation ===*/
+@keyframes pulse {
+ 0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+ 50% {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+ }
+
+}
+
+@-moz-keyframes pulse {
+ 0% {
+   -moz-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -moz-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -moz-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -webkit-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-ms-keyframes pulse {
+ 0% {
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -ms-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+/*===== Sec Title =====*/
+.sec-tl-wrp {
+  float: left;
+  margin-bottom: 67px;
+  width: 100%;
+}
+.sec-tl-innr {
+  display: inline-block;
+  padding-bottom: 70px;
+  position: relative;
+}
+.sec-tl-innr > h2 {
+  font-size: 42px;
+  letter-spacing: -.2px;
+  font-weight: 700;
+}
+.sec-tl-innr > span {
+  font-size: 16px;
+  letter-spacing: -.2px;
+  display: block;
+}
+.sec-tl-innr .tl-shp {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px dashed red;
+  width: 1px;
+  height: 45px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-left: -25px;
+}
+.sec-tl-innr .tl-shp:before {
+  height: 14px;
+  width: 14px;
+  border: 1px dashed red;
+  position: absolute;
+  content: "";
+  left: -7px;
+  top: -14px;
+}
+.sec-tl-innr .tl-shp::after {
+  content: "";
+  border: 1px dashed red;
+  height: 29px;
+  width: 29px;
+  position: absolute;
+  bottom: -29px;
+  left: -14.5px;
+}
+.sec-tl-innr .tl-shp-inr {
+  border-left: 1px dashed red;
+  width: 1px;
+  height: 37px;
+  position: absolute;
+  right: -35px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: -33.5px;
+}
+.sec-tl-innr .tl-shp-inr:before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 1px dashed red;
+  position: absolute;
+  top: -14px;
+  left: -7.5px;
+}
+/*===== Team Sec =====*/
+.membr-wrp {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding-top: 35px;
+  position: relative;
+}
+.membr-innr {
+  float: left;
+  background-color: #fbfbfb;
+  /*-webkit-box-shadow: 0 3px 35px rgba(0,0,0,.08);
+  -ms-box-shadow: 0 3px 35px rgba(0,0,0,.08);
+  -o-box-shadow: 0 3px 35px rgba(0,0,0,.08);
+  box-shadow: 0 3px 35px rgba(0,0,0,.08);*/
+  padding: 0 20px 130px;
+  width: 100%;
+}
+.membr-innr > img {margin-top: -35px;}
+.membr-inf {
+  position: absolute;
+  padding: 40px;
+  left: 0;
+  right: 0;
+}
+.membr-inf > h4 {
+  font-size: 20px;
+  letter-spacing: .2px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.membr-inf > h4 a:hover,
+.membr-inf > h4 a:focus {color: #000;}
+.membr-inf > span {
+  font-size: 12px;
+  letter-spacing: .2px;
+}
+.scl-inf {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 11px;
+}
+.scl-inf > a {
+  display: inline-block;
+  font-size: 10.5px;
+  color: #ffffff;
+  padding: 0 12px;
+  border-right: 1px solid #ffffff;
+  line-height: 10px;
+}
+.scl-inf > a:last-child {border-right: 0;}
+.scl-inf > a:hover {color: #0e0623;}
+.membr-inf > p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 30px 0 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.membr-wrp:hover .membr-inf {
+  background-color: red;
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  top: 50%;
+  padding: 40px 50px;
+  /*margin-top: -17.5px;*/
+}
+.membr-wrp:hover .membr-inf > h4,
+.membr-wrp:hover .membr-inf > span {color: #ffffff;}
+.membr-wrp:hover .membr-inf .scl-inf {
+  opacity: 1;
+  visibility: visible;
+}
+.membr-wrp:hover .membr-inf > p {
+  opacity: 1;
+  visibility: visible;
+}
+.membr-wrp:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  opacity: 0;
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+}
+.membr-wrp:hover:before {opacity: 1;}
+.vw-al {
+  float: left;
+  width: 100%;
+  margin-top: 90px;
+}
+.vw-al > a {
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  border: 2px solid transparent;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 9px 10px 9px 50px;
+  text-align: left;
+  line-height: 48px;
+}
+.vw-al > a i {
+  color: #282828;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+  float: right;
+  width: 48px;
+  background-color: #fff;
+  margin-left: 24px;
+}
+.vw-al > a:hover {
+  background-color: transparent;  
+  background-image: none;
+}
+.vw-al > a:hover i {
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  color: #fff;
+}
+/*===== Amazing Features =====*/
+.amz-fea {
+  float: left;
+  width: 100%;
+}
+.amz-mckp {
+  float: left;
+  width: 125%;
+  margin: -200px 0 -100px -20%;
+}
+.amz-tl {
+  float: left;
+  width: 100%;
+}
+.amz-tl > h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.amz-tl > h2 i {font-style: normal;}
+.amz-tl > p {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 30px 0 0;
+  letter-spacing: 0;
+}
+.fea-wrp {
+  float: left;
+  width: 100%;
+}
+.fea-bx2 {
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+}
+.fea-bx2 > i {
+  font-size: 40px;
+  float: left;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+.fea-innr {display: table;}
+.fea-innr > h5 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.fea-innr > p {
+  margin: 15px 0 0;
+  line-height: 27px;
+  letter-spacing: 0;
+  font-size: 13px;
+}
+/*===== App ScreenShots =====*/
+.app-scrn-wrp {
+  float: left;
+  width: 100%;
+  background-position: center -25px;
+  background-repeat: no-repeat;
+  padding: 109px 0 140px;
+  position: relative;
+  z-index: 1;
+}
+.app-scrn-caro {
+  float: left;
+  width: 100%;
+  padding: 0 70px;
+}
+.app-itm {
+  float: left;
+  width: 100%;
+  opacity: .77;
+}
+.app-itm > img {
+  -webkit-box-shadow: 0 3px 21px rgba(0,0,0,.1);
+  -ms-box-shadow: 0 3px 21px rgba(0,0,0,.1);
+  -o-box-shadow: 0 3px 21px rgba(0,0,0,.1);
+  box-shadow: 0 3px 21px rgba(0,0,0,.1);
+  -webkit-transform: scale(.8);
+  -ms-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+}
+.owl-item.center .app-itm {opacity: 1;}
+.owl-item.center .app-itm > img {
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  -o-transform: scale(.95);
+  transform: scale(.95);
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.app-scrn-caro .owl-nav {
+  display: inline-block;
+  position: absolute;
+  bottom: -140px;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+}
+.app-scrn-caro .owl-nav > div {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+  transform: translate(0);
+  font-size: 14.65px;
+  color: #3e3e3e;
+}
+.app-scrn-caro .owl-nav > div.owl-prev {left: 0;}
+.app-scrn-caro .owl-nav > div.owl-next {right: 0;}
+/*===== Testimonials Sec =====*/
+.testi-caro-wrp {
+  float: left;
+  width: 100%;
+}
+.testi-caro-innr {
+  float: left;
+  width: 100%;
+}
+.testi-bx {
+  float: left;
+  width: 100%;
+}
+.testi-bx > img {
+  float: left;
+  max-width: 130px;
+  margin-right: 30px;
+}
+.testi-bx-innr {
+  display: table;
+  vertical-align: middle;
+}
+.testi-bx-innr > p {
+  color: #666;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.testi-bx-innr > h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  display: inline-block;
+  letter-spacing: 0;
+}
+.testi-bx-innr > i {
+  margin-left: 20px;
+  font-size: 13px;
+  letter-spacing: .4px;
+  font-style: normal;
+}
+/*.owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+}
+.owl-carousel .owl-dots > div {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  background-color: #e4e4e4;
+  margin: 0 2.5px;
+}*/
+/*===== FAQ Sec =====*/
+.tlt-txt {
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+.tlt-txt-innr {display: inline-block;}
+.text-center .tlt-txt-innr {max-width: 70%;}
+.tlt-txt-innr > i {
+  display: inline-block;
+  margin-bottom: 34px;
+}
+.tlt-txt-innr > h2 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  margin: 0 0 23px;
+}
+.tlt-txt-innr > h2 i {font-style: normal;}
+/*.text-center .tlt-txt-innr > h2 {margin-bottom: 13px;}*/
+.tlt-txt-innr > p {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.faq-wrp {
+  float: left;
+  width: 100%;
+  padding-right: 45px;
+}
+.acordn-itm {
+  border-bottom: 3px solid #484848;
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.acordn-itm:last-child {border-color: transparent;}
+.acordn-itm + .acordn-itm {margin-top: 25px;}
+.acordn-itm > h4 {
+  font-size: 15px;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.acrdn-cnt {
+  float: left;
+  width: 100%;
+}
+.acrdn-cnt > p {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #444;
+}
+.acordn-itm > h4 i {
+  float: right;
+  color: #484848;
+}
+.acordn-itm.activate > h4 i:before {content: "\f062";}
+.acordn-itm.activate > h4 {margin-bottom: 17px;}
+.chr-mckp {
+  float: left;
+  width: 125%;
+  margin-left: -5%;
+}
+/*===== Keep In Touch Sec =====*/
+.gmp {
+  float: left;
+  height: 630px;
+  width: 100%;
+}
+.cont-wrp {
+  float: left;
+  width: 1290px;
+  margin-left: -60px;
+  position: relative;
+  background-color: #fbfbfb;
+  -webkit-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -ms-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -o-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  z-index: 1;
+}
+.cnt-inf {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  padding: 70px;
+}
+.cnt-inf-tl {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.cnt-inf-tl > h4 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  color: #333;
+  margin-bottom: 0;
+}
+.cnt-inf-lst {
+  float: left;
+  width: 100%;
+}
+.cnt-inf-lst > p {
+  float: left;
+  width: 100%;
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 18px;
+  letter-spacing: .3px;
+}
+.cnt-inf-lst > p.adr {
+  margin-top: 40px;
+  line-height: 24px;
+  color: #666;
+}
+.cnt-frm {
+  float: left;
+  width: 100%;
+  padding: 83px 70px;
+}
+.cnt-frm input,
+.cnt-frm textarea {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.06);
+  -ms-box-shadow: 0 0 20px rgba(0,0,0,.06);
+  -o-box-shadow: 0 0 20px rgba(0,0,0,.06);
+  box-shadow: 0 0 20px rgba(0,0,0,.06);
+  font-size: 11px;
+  padding: 18px 30px;
+  height: 55px;
+  width: 100%;
+  float: left;
+  color: #888888;
+  margin-bottom: 10px;
+}
+.cnt-frm textarea {height: 160px;}
+.cnt-frm button {
+  background-image: -moz-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,.2)), color-stop(100%, rgba(255,255,255,.06)));
+  background-image: -webkit-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -o-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: -ms-linear-gradient(4deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  background-image: linear-gradient(86deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.06) 100%);
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  padding: 22px 53px 20px;
+  font-family: poppins;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+}
+/*===== Newsletter =====*/
+.nws-ltr-wrp {
+  float: left;
+  width: 100%;
+}
+.nws-ltr-inr {
+  display: inline-block;
+  max-width: 710px;
+  width: 100%;
+}
+.nws-ltr-tl {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 45px;
+}
+.nws-ltr-tl > i {
+  float: left;
+  margin-right: 30px;
+}
+.nws-ltr-tl-inr {display: table;}
+.nws-ltr-tl-inr > h3 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  font-size: 32px;
+}
+.nws-ltr-tl-inr > span {
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0;
+}
+.nws-ltr-frm {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  -webkit-box-shadow: 0 3px 68px rgba(0,0,0,.1);
+  -ms-box-shadow: 0 3px 68px rgba(0,0,0,.1);
+  -o-box-shadow: 0 3px 68px rgba(0,0,0,.1);
+  box-shadow: 0 3px 68px rgba(0,0,0,.1);
+}
+.nws-ltr-frm > input {
+  width: 100%;
+  border: 0;
+  background-color: rgba(255,255,255,.3);
+  color: #fff;
+  padding: 10px 45px;
+  height: 68px;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+.nws-ltr-frm ::-webkit-input-placeholder {color: #fff;}
+.nws-ltr-frm ::-ms-input-placeholder {color: #fff;}
+.nws-ltr-frm > button {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  font-size: 10px;
+  padding: 0;
+  background-color: transparent;
+  color: #fff;
+  margin-top: -7.5px;
+}
+/*===== Footer =====*/
+footer {
+  background-color: #121212;
+  float: left;
+  width: 100%;
+}
+.ftr-wrp {
+  float: left;
+  width: 100%;
+}
+.ftr-innr {
+  display: inline-block;
+  max-width: 750px;
+  width: 100%;
+}
+.ftr-innr > h1 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: -.2px;
+  margin-bottom: 20px;
+}
+.ftr-innr > h1 span {font-weight: 300;}
+.ftr-innr > p {
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.ftr-innr > span {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 20px;
+}
+.ftr-innr > span i {
+  font-weight: 700;
+  font-style: normal;
+}
+.ft-scl {
+  display: inline-block;
+  margin-top: 20px;
+}
+.scl-btn {
+  float: left;
+  margin: 0 5px;
+  line-height: 36px;
+  font-size: 9.5px;
+  width: 40px;
+  color: #ffffff;
+  border: 2px solid;
+}
+.scl-btn:hover {background-color: transparent;}
+.poptrox-popup {padding: 10px !important;}
+.caption {display: none !important;}
+/*===== Recent News =====*/
+.rcnt-nws {
+  float: left;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.rcnt-thmb {
+  float: left;
+  width: 100%;
+}
+.nws-inf {
+  float: left;
+  width: 100%;
+  -webkit-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -ms-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  -o-box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 35px rgba(0,0,0,0.08);
+  padding: 40px 40px 60px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.mta {display: inline-block;}
+.mta > span {
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  color: #555;
+}
+.mta > span + span::before {
+  content: "-";
+  margin: 0 20px;
+}
+.nws-inf > h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: 0;
+  line-height: 22px;
+  display: inline-block;
+  margin: 14px 0 0;
+  max-width: 90%;
+}
+.nws-inf .pst-athr {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 13px;
+  letter-spacing: 0;
+  background-color: #fff;
+  padding: 16px 35px;
+  border: 2px solid #efefef;
+  min-width: 235px;
+}
+
+.skw-shp-tp,
+.skw-shp-bp {
+  background-color: #fff;
+  height: 100px;
+  width: 110%;
+  position: absolute;
+  right: -5%;
+}
+.skw-shp-tp {
+  top: -50px;
+  -webkit-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.skw-shp-bp {
+  bottom: -50px;
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.gry-bg .skw-shp-tp,
+.gry-bg .skw-shp-bp {background-color: #f3f2f2;}
+.skw-shp-tp.lft {
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  transform: rotate(4deg);
+  right: auto;
+  left: -5%;
+}
+.gry-lyr .skw-shp-tp.lft {background-color: #fbfbfb;}
+/*===== New Featured Areas Style =====*/
+.scene {position: absolute;}
+.scene--left {
+  width: 100vmin;
+  height: 100vmin;
+  -webkit-transform: translate3d(-50vmin,0,0);
+  -ms-transform: translate3d(-50vmin,0,0);
+  -o-transform: translate3d(-50vmin,0,0);
+  transform: translate3d(-50vmin,0,0);
+}
+.scene--full {
+  width: 100%;
+  height: 100vh;
+}
+.scene--up {
+  height: 150vmin;
+  width: 150vmin;
+  top: -50vh;
+  left: 50%;
+  margin-left: -75vmin;
+}
+/*===== Featured Area Style 1 =====*/
+.feat-wrp2,
+.feat-wrp3,
+.feat-wrp4,
+.feat-wrp5 {
+  float: left;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.feat-cap-inr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  max-width: 60%;
+  width: 100%;
+}
+.feat-cap-inr > h1 {
+  color: #fff;
+  letter-spacing: -3px;
+  font-size: 100px;
+  font-family: poppins;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.feat-cap-inr > span {
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  display: inline-block;
+}
+
+
+/*===== App Shocase =====*/
+.tp-opacity{opacity:0.35 !important}.tp-nopointer{pointer-events:none !important}
+
+/*===== Parallax Zoom Slices =====*/
+#rev_slider_5_1 .uranus.tparrows{width:50px; height:50px; background:rgba(255,255,255,0)}#rev_slider_5_1 .uranus.tparrows:before{width:50px; height:50px; line-height:50px; font-size:40px; transition:all 0.3s;-webkit-transition:all 0.3s}#rev_slider_5_1 .uranus.tparrows:hover:before{opacity:0.75}.hermes.tp-bullets{}.hermes .tp-bullet{overflow:hidden;  border-radius:50%;  width:16px;  height:16px;  background-color:rgba(0,0,0,0);  box-shadow:inset 0 0 0 2px rgb(255,255,255);  -webkit-transition:background 0.3s ease;  transition:background 0.3s ease;  position:absolute}.hermes .tp-bullet:hover{background-color:rgba(0,0,0,0.21)}.hermes .tp-bullet:after{content:' '; position:absolute; bottom:0; height:0; left:0; width:100%; background-color:rgb(255,255,255); box-shadow:0 0 1px rgb(255,255,255); -webkit-transition:height 0.3s ease; transition:height 0.3s ease}.hermes .tp-bullet.selected:after{height:100%}
+
+/*===== Particle Effect Two =====*/
+.blurslider-gradient{background:-webkit-linear-gradient(left,#9357cc 0%,#2989d8 50%,#2cc99d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.blurslider-button{background:-webkit-linear-gradient(left,#9357cc 0%,#2989d8 50%,#2cc99d 100%)}
+
+/*===== Blog Detail =====*/
+.blg-dtl {
+  float: left;
+  width: 100%;
+}
+.blg-dtl > img {margin-bottom: 45px;}
+.blg-mta {
+  float: left;
+  margin-bottom: 30px;
+  padding: 0 8%;
+  width: 100%;
+}
+.blg-mta > h1 {
+  float: left;
+  font-size: 22px;
+  margin: 10px 0 0;
+  width: 100%;
+}
+.pst-meta > li.cmt {font-weight: 700;}
+.blg-dtl > p {
+  clear: both;
+  font-size: 15px;
+  margin-bottom: 30px;
+  padding: 0 8%;
+}
+.blg-mta .pst-meta {width: 100%;}
+blockquote {
+  background: url(../images/blcqut-bg1.jpg) center center/cover rgba(0, 0, 0, 0);
+  border-left: 0 none;
+  margin-bottom: 40px;
+  padding: 55px 10%;
+  position: relative;
+  z-index: 1;
+}
+blockquote:before {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: .7;
+}
+blockquote p {
+  color: #fff!important;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.share > span,
+.tagclouds > a,
+.tagclouds > span {
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 600;
+}
+.share > a,
+.share > span,
+.tagclouds > * {line-height: 38px;}
+.shar-tag {
+  border-bottom: 3px double #ebebeb;
+  border-top: 3px double #ebebeb;
+  float: left;
+  padding: 20px 0;
+  width: 100%;
+}
+.share {float: left;}
+.share > span {
+  color: #666;
+  float: left;
+  margin-right: 15px;
+}
+.share > a {
+  background: #fbfbfb;
+  color: #555;
+  float: left;
+  height: 38px;
+  margin-left: 5px;
+  position: relative;
+  width: 40px;
+  z-index: 1;
+  text-align: center;
+}
+.tagclouds {float: right;}
+.tagclouds > span {color: #555;}
+.tagclouds > a:hover {color: #333;}
+.share > a:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(.5);
+  -ms-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  z-index: -1;
+}
+.comment:before,
+.pst-author:before {
+  bottom: 0;
+  left: 100px;
+  content: "";
+  right: 0;
+}
+.share > a:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.share > a:hover {color: #fff;}
+.pst-author {
+  display: table;
+  float: left;
+  margin-top: 45px;
+  padding: 10px 115px 10px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.pst-author:before {
+  background: #fbfbfb;
+  -webkit-border-radius: 0 110px 110px 0;
+  border-radius: 0 110px 110px 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.pst-author > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pst-author-detail {padding-left: 50px;}
+.author-social,
+.comments-thred {
+  padding-left: 0;
+  list-style: none;
+}
+.pst-author > img {min-width: 170px;}
+.pst-author-detail > h2 {
+  float: left;
+  font-size: 15px;
+  margin: 0;
+}
+.pst-author-detail > h2 a:hover,
+.pst-author-detail > h2 a:focus {color: #000;}
+.author-social {
+  float: right;
+  margin-bottom: 0;
+}
+.author-social > li {
+  float: left;
+  font-size: 13px;
+  margin-right: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+.author-social > li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.author-social > li:before {
+  background: #9c9c9c;
+  content: "";
+  height: 9px;
+  margin-top: -4.5px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+}
+.comment,
+.comments,
+.comments-thred,
+.comments-thred > li,
+.pst-author-detail > p,
+.title {
+  width: 100%;
+  float: left;
+}
+.author-social > li:last-child:before {display: none;}
+.author-social > li a:hover {color: #333;}
+.pst-author-detail > p {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.comments {margin-top: 50px;}
+.title {margin-bottom: 30px;}
+.title > span {font-size: 13px;}
+.title > h4 {
+  color: #323232;
+  font-size: 24px;
+}
+.comments-thred {
+  margin-bottom: 0;
+  margin-top: -10px;
+}
+.comment {
+  display: table;
+  padding: 10px 50px 10px 0;
+  position: relative;
+  z-index: 1;
+}
+.comment:before {
+  background: #fbfbfb;
+  -webkit-border-radius: 0 110px 110px 0;
+  border-radius: 0 110px 110px 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.comment > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.comment-thumb {
+  min-width: 170px;
+  position: relative;
+}
+.comment-reply-link {
+  bottom: 20px;
+  color: #fff;
+  font-family: poppins;
+  font-size: 11px;
+  font-weight: 600;
+  left: 50%;
+  line-height: 36px;
+  padding: 0 40px;
+  position: absolute;
+}
+.comment-reply-link:hover {
+  background: #000;
+  color: #fff;
+}
+.comment-detail {padding-left: 50px;}
+.comment-detail > h2 {
+  color: #323232;
+  float: left;
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-right: 70px;
+  margin-top: 0;
+}
+.comment-detail > h2 a {color: inherit;}
+.comment-detail > span {
+  float: left;
+  font-size: 12px;
+}
+.comment-detail > p,
+.comments-thred li {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+.comment-detail > p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.comment ~ ul {
+  list-style: none;
+  padding-left: 170px;
+}
+.reply-comment {
+  float: left;
+  margin-top: 50px;
+  width: 100%;
+}
+.reply-comment > form {
+  float: left;
+  width: 100%;
+}
+.reply-comment > form input,
+.reply-comment > form textarea {
+  background: #fbfbfb;
+  border: 0;
+  color: #8c8c8c;
+  float: left;
+  font-size: 12px;
+  height: 58px;
+  padding: 20px 40px;
+  width: 100%;
+}
+.mrg5 input,
+.mrg5 textarea {margin-bottom: 5px;}
+.mrg10 input,
+.mrg10 textarea {margin-bottom: 10px;}
+.reply-comment > form textarea {min-height: 185px;}
+.reply-comment > form button {margin-top: 40px;}
+
+
+.widget {
+  float: left;
+  width: 100%;
+  margin-bottom: 65px;
+}
+.widget-title2 {
+  margin-bottom: 30px;
+  width: 100%;
+  float: left;
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  position: relative;
+}
+.rcnt-pst,
+.widget p,
+.widget-data {
+  float: left;
+  width: 100%;
+}
+.widget p {
+  font-size: 15px;
+  color: #787878;
+  margin-bottom: 0;
+}
+.widget p + p {margin-top: 25px;}
+.rcnt-pst {display: table;}
+.rcnt-pst + .rcnt-pst {margin-top: 30px;}
+.rcnt-pst > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.rcnt-pst > a {width: 87px;}
+.rcnt-pst-inf > h2,
+.widget ul,
+.widget ul li {
+  width: 100%;
+  float: left;
+}
+.widget ul {
+  background: #fbfbfb;
+  padding: 35px 30px;
+  list-style: none;
+  margin-bottom: 0;
+}
+.widget ul li {
+  font-size: 13px;
+  color: #444;
+  line-height: 35px;
+  position: relative;
+}
+.widget ul li + li {margin-top: 20px;}
+.widget ul li span {
+  font-size: 10px;
+  font-weight: 700;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  border: 2px solid #fff;
+  float: right;
+  line-height: 35px;
+}
+.widget ul li:hover > span {color: #fff;}
+.rcnt-pst-inf {padding-left: 20px;}
+.rcnt-pst-inf > h2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 3px;
+}
+.rcnt-pst-inf > span {
+  font-size: 11px;
+  color: #7b7b7b;
+}
+.member-detail > span,
+.pst-meta > li.cmt,
+.widget ul li,
+blockquote p {font-family: poppins;}
+.tagcloud > a:before,
+.video-thumb:before {
+  content: "";
+  right: 0;
+  bottom: 0;
+}
+.pst-meta {
+  float: left;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.pst-meta > li {
+  float: left;
+  font-size: 13px;
+  color: #555;
+  margin-right: 20px;
+}
+.pst-meta > li i,
+span.date > i {margin-right: 5px;}
+span.date {
+  font-size: 12px;
+  color: #555;
+  float: left;
+}
+.video-pst {
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+.video-thumb {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+.video-thumb:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: .6;
+}
+.video-thumb > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 45px;
+}
+.video-thumb > a:hover,
+.video-thumb > a:focus {color: #fff;}
+.video-info {
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+}
+.video-info > h2 {
+  margin-top: 0;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.video-info > span {
+  float: none;
+  display: inline-block;
+}
+.tagcloud {
+  float: left;
+  width: 100%;
+  padding: 35px 30px;
+  background: #fbfbfb;
+}
+.tagcloud > a {
+  background: #fff;
+  font-size: 11px;
+  font-style: italic;
+  color: #555;
+  padding: 0 22px;
+  line-height: 40px;
+  margin-right: 4px;
+  margin-top: 3px;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+.tagcloud > a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(.5);
+  -ms-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  opacity: 0;
+}
+.tagcloud > a:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.tagcloud > a:hover {color: #fff;}
+.flickr-gallery {
+  float: left;
+  width: 100%;
+  margin-bottom: -5px;
+}
+.flickr-gallery a {
+  overflow: hidden;
+  display: block;
+  margin-bottom: 5px;
+}
+.flickr-gallery a:hover > img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.page-top {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 70px 0;
+}
+.page-title {
+  float: left;
+  width: 100%;
+}
+.page-title > h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.btn1 {
+  background: #000;
+  border: 0;
+  color: #fff;
+  padding: 0 50px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 58px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 6px 13px rgba(14, 44, 53, .14);
+  -ms-box-shadow: 0 6px 13px rgba(14, 44, 53, .14);
+  -o-box-shadow: 0 6px 13px rgba(14, 44, 53, .14);
+  box-shadow: 0 6px 13px rgba(14, 44, 53, .14)
+}
+
+/*===== Team Detail =====*/
+
+.mbr-inf-wrp {
+  float: left;
+  min-height: 463px;
+  position: relative;
+  width: 100%;
+}
+.mbr-inf-inr {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  padding-right: 10px;
+}
+.mbr-inf {
+  float: left;
+  text-align: right;
+  width: 100%;
+}
+.mbr-scil {
+  float: left;
+  margin-top: 16px;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+.mbr-scil > li {
+  line-height: 38px;
+  margin-right: 5px;
+  text-align: center;
+  color: #fff;
+  float: left;
+}
+.mbr-scil > li a {
+  color: inherit;
+  display: block;
+  height: 38px;
+  width: 38px;
+  border-width: 2px;
+  border-style: solid;
+}
+.mbr-scil > li a:hover {background-color: transparent;}
+.mbr-inf > h1 {
+  float: right;
+  font-size: 36px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.mbr-inf > i {
+  float: right;
+  font-size: 15px;
+  width: 100%;
+}
+.mbr-cnt,
+.mbr-cnt > li,
+.mbr-inf > p {
+  float: left;
+  width: 100%;
+}
+.mbr-inf > p {
+  color: #666;
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.mbr-cnt {
+  float: left;
+  margin-bottom: 0;
+  margin-top: 25px;
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+}
+.mbr-cnt > li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  margin-top: 10px;
+}
+.mbr-cnt > li i {
+  color: #fff;
+  float: right;
+  font-size: 13px;
+  height: 42px;
+  line-height: 42px;
+  margin-left: 30px;
+  text-align: center;
+  width: 42px;
+}
+
+/*===== 404 Error Page =====*/
+.er-pg {
+  float: left;
+  width: 100%;
+}
+.er-pg-inr {
+  display: inline-block;
+  max-width: 620px;
+  width: 100%;
+}
+.er-pg-inr > span,
+.er-pg-inr > strong {
+  display: block;
+  font-family: poppins;
+}
+.er-pg-inr > strong {
+  font-size: 72px;
+  font-weight: 700;
+}
+.er-pg-inr > span {
+  font-size: 42px;
+  font-weight: 600;
+}
+.er-pg-inr > p {
+  color: #636363;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  margin-top: 25px;
+  max-width: 60%;
+}
+.pg-srch-frm {
+  display: inline-block;
+  max-width: 560px;
+  position: relative;
+  width: 100%;
+}
+.pg-srch-frm > input {
+  background: #f3f4f6;
+  color: #8799a3;
+  font-size: 13px;
+  font-style: italic;
+  background: #fbfbfb;
+  border: 0;
+  float: left;
+  height: 58px;
+  padding: 20px 40px;
+  width: 100%;
+}
+.pg-srch-frm > button {
+  background: 0 0;
+  border: 0;
+  color: #bbc7cd;
+  font-size: 21px;
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+}
+.er-pg-inr > a {
+  -webkit-box-shadow: 0 10px 30px rgba(0, 129, 255, .2);
+  -ms-box-shadow: 0 10px 30px rgba(0, 129, 255, .2);
+  -o-box-shadow: 0 10px 30px rgba(0, 129, 255, .2);
+  box-shadow: 0 10px 30px rgba(0, 129, 255, .2);
+  margin-top: 45px;
+}
+.srch-fund-inr {
+  float: left;
+  padding: 0 50px;
+  text-align: center;
+  width: 100%;
+}
+.srch-fund-inr > strong {
+  color: #333;
+  display: inline-block;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+.srch-fund-inr > p {
+  color: #636363;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+.er-pg-inr > a:hover,
+.er-pg-inr > a:focus {color: #fff;}
